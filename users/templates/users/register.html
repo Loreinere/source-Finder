@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+        <title>Registration</title>
+
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+</head>
+    <body>
+        <header>
+            <div class="sign-up-form">
+                <h1>Sign Up</h1>
+        </header>
+
+        <p>Username:<input type="email" class="input-box" placeholder="Your Username"></p>
+        <p>Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.
+        Password:<input type="email" class="input-box" placeholder="Password"></p>
+        <ul>
+            <li>Your password can't be too similiar to your other personal information</li>
+            <li>Your password must contain at least 8 characters</li>
+            <li>Your password can't be a commonly used password</li>
+            <li>Your password can't be entirely numeric</li>
+        </ul>
+        <p>Password confirmation:<input type="email" class="input-box" placeholder="Confirm Password"></p>
+        <p>Enter the same password as before for confirmation.<a class="reg" href="#"><button>Register</button></a></p>
+
+
+            <h1>Sign Up Now</h1>
+            <form>
+            <input type="email" class="input-box" placeholder="Your Email">
+            <input type="email" class="input-box" placeholder="Your Password">
+            <input type="email" class="input-box" placeholder="Repeat Your Password">
+            <p>I agree to the term of sevices</p>
+            </form>
+        </div>
+    {% block content %}
+    {% endblock %}
+
+
+
+
+
+
+    </body>
+</html>
