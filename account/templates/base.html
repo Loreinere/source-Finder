@@ -19,6 +19,8 @@
             </li>
             <li {% if section == "people" %}class="selected"{% endif %}>
              <a href="#">People</a>
+            <li {% if section == "home" %}class="selected"{% endif %}>
+             <a href={% url 'newsweek-home' %}>Home</a>
             </li>
         </ul>
         {% endif %}
