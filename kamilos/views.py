@@ -23,6 +23,11 @@ def user_login(request):
         form = LoginForm()
     return render(request, 'account/login.html', {'form': form})
 
+def home(request):
+    return render(request,
+                  '127.0.0.1:8000/',
+                  {'section': 'home'})
+
 @login_required
 def dashboard(request):
     return render(request,
