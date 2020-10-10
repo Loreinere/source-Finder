@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'import_export',
+    'bootstrap4'
 
 
 
@@ -136,11 +137,6 @@ STATICFILES_DIRS = [
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
-
-# E-mail configuration
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
 
 
 
