@@ -25,7 +25,7 @@ SECRET_KEY = 'idnwzvf4xzak*f(8zg#yuna(31n0uc()d9ufj&hwr3y-1per!l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['source-finder.org', 'localhost', '127.0.0.1']
 
 
 # Application definition
