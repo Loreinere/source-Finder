@@ -71,10 +71,19 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                
+                'social_django.context_processors.backends',  
+                'social_django.context_processors.login_redirect', 
             ],
         },
     },
 ]
+
+# authentication user by social media:
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.facebook.FacebookOAuth2',
+)
 
 WSGI_APPLICATION = 'kamilos.wsgi.application'
 
@@ -137,6 +146,12 @@ STATICFILES_DIRS = [
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
+
+
+# SOCIAL_AUTH_FACEBOOK
+
+SOCIAL_AUTH_FACEBOOK_KEY = '****'
+SOCIAL_AUTH_FACEBOOK_SECRET = '****'
 
 
 
