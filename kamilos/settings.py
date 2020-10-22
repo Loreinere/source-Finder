@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'import_export',
-    'bootstrap4'
+    'bootstrap4',
+    'search.apps.SearchConfig',
 
 
 
