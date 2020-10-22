@@ -43,6 +43,7 @@ urlpatterns = [
     path('account/', include('account.urls')),
     path('', include('newsweek.urls')),
     path('upload/', include('upload.urls')),
+    path('search/', include('search.urls')),
 
 ]
 
