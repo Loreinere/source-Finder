@@ -1,13 +1,23 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block title %}Login{% endblock %}
 
 {% block content %}
-<h1>Login</h1>
-<p>Please try to login:</p>
-<form action="." method="post">
-    {{ form.as_p }}
-    {% csrf_token %}
-    <p><input type='submit' name="submitbutton" value="Sign in"></p>
-</form>
+    {% if form.errors %}
+        <p>
+            The username or password is incorrect.
+            Please try again.
+        </p>
+    {% else %}
+        <p>Please fill in the form below to sign in.
+            If you don't have an account yet, you can create it <a href={% url 'register' %}>here</a>.</p> You can also go back to <a href={% url 'newsweek-home' %}> main page</a>.</p>
+    {% endif %}
+    <div class="login-form">
+        <form action="{% url 'login' %}" method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}" />
+            <p><input type="submit" value="Sign in"></p>
+        </form>
+    </div>
 {% endblock %}
