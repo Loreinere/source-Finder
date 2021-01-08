@@ -1,7 +1,17 @@
 from django import forms
-from .models import upload
+from .models import Upload, Comment
 
 class UploadCreateForm(forms.ModelForm):
     class Meta:
-        model = upload
-        fields = ('author', 'Title', 'created')
+        model = Upload
+        fields = ('Title', 'Issn', 'description')
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('body',)
+
+class AddCreateForm(forms.ModelForm):
+    class Meta:
+        model = Upload
+        fields = ('Title', 'Issn')
